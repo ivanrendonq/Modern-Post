@@ -1,12 +1,16 @@
 {
   "name": "modern-post",
   "version": "0.0.0",
+  "main": "app.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "electron": "electron .",
+    "electron-build": "ng build && electron .",
+    "electron-win32": "electron-packager ./ ModernPost --platform=win32 --overwrite"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +22,8 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "electron": "^30.1.0",
+    "electron-packager": "^17.1.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
